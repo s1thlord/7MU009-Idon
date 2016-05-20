@@ -135,8 +135,8 @@ considering the pros and cons of this software:
 
  
 the positive aspects of this software are its tone generation capabilites. the software once "patched" between the various elements can produce a range of timbre that would be very hard to achieve with conventional sample based keyboards. 
-However this timbre range comes at a cost of CPU load when compared to a DAW instrument plugins.
-Another issue with this desin as discussed in the development chapter is the patching of the modules. Originally it was intended to have a patching system simiLar to the DAW software Reason where outboard effects are plugged in via a "jack" cable.
+However this timbre range comes at a cost of CPU load when compared to a DAW instrument plugin.
+Another issue with this desgin as discussed in the development chapter is the patching of the modules. Originally it was intended to have a patching system simiLar to the DAW software Reason where outboard effects are plugged in via a "jack" cable.
 
 ![donscreen12] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-20%20at%2012.56.57.png)
 
