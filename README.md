@@ -1,6 +1,8 @@
 ##  A Software Introduction to West Coast Modular Synthesis
 
-by Chris Holder email chris.holder@mail.com 
+by Chris Holder 
+
+Any comments please email chris.holder@mail.com 
 
 The aim of this project is to provide a cost effective introduction into modular type synthesis for novice users. The software component provides an insight into the sonic capabilities of modular synths and offers an overview of some of the key techniques used by the practitioners of these units such as Morton Subtonick who wrote the classic Silver Apples of the Moon. Released in 1967, it was the very first electronic music ever commissioned by a record label and also Alessandro Cortini of Nine Inch Nails (some of these techniques are shown in the accompanying demonstration video the link for this and the Pure Data software for this project can be found at the bottom of the page).
 
@@ -127,22 +129,40 @@ The first of these patches is a model of the Buchla 123 sequential voltage sourc
   ![don10screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.36.12.png)
 
  **fig 16** shows GUI of Pure Data volume controller.
+
+## software Evaluation
+considering the pros and cons of this software:
+
+ 
+the positive aspects of this software are its tone generation capabilites. the software once "patched" between the various elements can produce a range of timbre that would be very hard to achieve with conventional sample based keyboards. 
+However this timbre range comes at a cost of CPU load when compared to a DAW instrument plugins.
+Another issue with this desin as discussed in the development chapter is the patching of the modules. Originally it was intended to have a patching system simiLar to the DAW software Reason where outboard effects are plugged in via a "jack" cable.
+
+![donscreen12] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-20%20at%2012.56.57.png)
+
+
+**fig 17** Reason screenshot of patching
+
+
+
+
+
  
 ##   User Guide to the software 
 
 This simple user guide is here to explain the very basic operation of the Pure data patches for a full working demonstration please see the video link at the bottom of this page. 
 
-To operate this project it is recommended that all four patches are fully loaded before beginning. Once all four patches are loaded simply push up the required oscillator volume slider, coloured blue in the mixer patch (shown in Fig 16). From here it is a simple matter of crafting a desired sound from the oscillator by turning the frequency control. The technique known as patching is achieved by using the toggles on the GUI, shown in Fig 17 as a quick example to patch the pitch voltage to the 1 volt per octave input you have to depress both toggles coloured green in this case for the signal to flow between the units it is hoped that this design simulates placing a jack lead between the inputs and outputs of the various units.
+To operate this project it is recommended that all four patches are fully loaded before beginning. Once all four patches are loaded simply push up the required oscillator volume slider, coloured blue in the mixer patch (shown in Fig 16). From here it is a simple matter of crafting a desired sound from the oscillator by turning the frequency control. The technique known as patching is achieved by using the toggles on the GUI, shown in Fig 18 as a quick example to patch the pitch voltage to the 1 volt per octave input you have to depress both toggles coloured green in this case for the signal to flow between the units it is hoped that this design simulates placing a jack lead between the inputs and outputs of the various units.
 
  ![don11screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.37.38.png)
 
-**Fig 17** screen shot showing patching toggles.
+**Fig 18** screen shot showing patching toggles.
 
-The patching process for the 258 model is achieved in the similar manner as the previous example. With reference to fig 17 to patch the control voltage over the Frequency controller you would simply press the desired wave shape toggle located just above the frequency dial. In this case only the one toggle needs to be activated. The reason for the single toggle patching process for this unit was to make the GUI less cluttered and easier to understand. 
+The patching process for the 258 model is achieved in the similar manner as the previous example. With reference to fig 19 to patch the control voltage over the Frequency controller you would simply press the desired wave shape toggle located just above the frequency dial. In this case only the one toggle needs to be activated. The reason for the single toggle patching process for this unit was to make the GUI less cluttered and easier to understand. 
   
   ![don11screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.37.51.png)
   
-  **Fig 18** Screenshot showing software input toggles on 258 model.
+  **Fig 19** Screenshot showing software input toggles on 258 model.
 
 
 This user guide is meant to cover only the very basics of the software
