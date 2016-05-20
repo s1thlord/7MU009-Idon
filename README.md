@@ -1,5 +1,3 @@
-# 7MU009-Idon
-
 ##  A Software Introduction to West Coast Modular Synthesis
 
 by Chris Holder email chris.holder@mail.com 
@@ -57,8 +55,8 @@ The first idea for this operation was to use the link system by which Pure Data 
 ![don4screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-02%20at%2010.49.48.png)
   
   **Fig 6** Shows the failed attempt to map the various 
-
 jack socket operations. 
+
 From this failed attempt came the idea to use the Toggle object within Pure Data, which is a simple switch to imitate plugging in the jack leads. However this idea does come with one drawback that being for every connection to be made must be represented by a different toggle object. Despite this one draw back the method was used as being the next most intuitive system to mimic the “patching” used by modular synthesizer systems. 
 
 The next task of this project was to look into the operation of each input for the system. These inputs are the Control voltage inputs and the 1-volt per octave system implemented by Moog in the early 1970’s. The original Buchla system for pitch tracking was a volt per hertz system however this meant that fewer octaves could be expressed over a given voltage range (Dalgleish 2016). However over the intervening years Moog’s system became the more popular method for tracking pitch on modular systems (Dalgleish 2016). Hence this method was used for greater compatibility should the unit be made into a digital hardware version. The Control voltage and one volt per octave system that was implemented within the software for this project (shown in Fig 7), functions by scaling midi note values into the modeled working voltage of a modular synth in this case +5 and -5 volts. Once this scale has been done the output is turned into a scaled floating signal. The signals amplitude is then increased by a value of 5 to ensure a positive value this in turn is then multiplied by 12 to restore the 0-120 midi note values. The reason for then subtracting by 60 is to scale the pitch into 6 octaves this control signal is then turn into frequency to drive the tone generation oscillators. With the CV and 1 volt octave system in place the unit now had all the major functions available on the Buchla 258. The final phase of this project was to begin making the software abstraction have authentic Buchla audio output.
@@ -172,5 +170,11 @@ https://youtu.be/1ptTxy4Khcs
 
 
 ## software download
+**Sequencer:**
+ https://github.com/s1thlord/idon/blob/gh-pages/buchla%20123.pd 
+ 
+ **Audio mixer:**https://github.com/s1thlord/idon/blob/gh-pages/buchla%20mixer.pd            
 
-          
+**Quad gate:** https://github.com/s1thlord/idon/blob/gh-pages/buchla%20280.pd
+
+**Oscillator:** https://github.com/s1thlord/idon/blob/gh-pages/buchla258s.pd
