@@ -1,5 +1,5 @@
 # 7MU009-Idon
-Software introduction to west coast modular synthesis
+
 ##  A Software Introduction to West Coast Modular Synthesis
 
 by Chris Holder email chris.holder@mail.com 
