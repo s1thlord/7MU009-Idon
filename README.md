@@ -198,3 +198,4 @@ https://youtu.be/1ptTxy4Khcs
 **Quad gate:** https://github.com/s1thlord/idon/blob/gh-pages/buchla%20280.pd
 
 **Oscillator:** https://github.com/s1thlord/idon/blob/gh-pages/buchla258s.pd
+it is advised to download and run in Pure Data all modules for the software for best results.
