@@ -1,0 +1,123 @@
+#N canvas 161 82 517 340 10;
+#N canvas 595 79 667 680 guts 0;
+#X obj 125 201 vsl 50 200 0 1 0 0 empty empty OSC1 1 210 2 12 -4160
+-262144 -1 0 1;
+#X obj 165 59 r~ out1;
+#X obj -79 627 *~;
+#X obj 199 202 vsl 50 200 0 1 0 0 empty empty OSC2 1 210 2 12 -4160
+-262144 -1 0 1;
+#X obj 6 625 *~;
+#X obj 271 63 r~ out2;
+#X obj 447 817 dac~;
+#X obj 454 757 matrix~ 8 1;
+#X obj 133 113 tgl 25 0 empty empty OUTPUT -10 30 2 12 -4160 -262144
+-1 0 1;
+#X obj 427 543 sel 1;
+#X msg 425 596 connect 0 0;
+#X obj 476 547 sel 0;
+#X msg 440 622 disconnect 0 0;
+#X obj 208 113 tgl 25 0 empty empty OUTPUT -10 30 2 12 -4160 -262144
+-1 0 1;
+#X obj 541 539 sel 1;
+#X obj 590 543 sel 0;
+#X msg 539 592 connect 1 0;
+#X msg 549 624 disconnect 1 0;
+#X obj 288 201 vsl 50 200 0 1 0 0 empty empty ATT1 1 210 2 12 -4034
+-33289 -1 0 1;
+#X obj 81 621 *~;
+#X obj 362 202 vsl 50 200 0 1 0 0 empty empty ATT2 1 210 2 12 -4034
+-1 -1 0 1;
+#X obj 172 621 *~;
+#X obj 298 114 tgl 25 0 empty empty OUTPUT -10 30 2 12 -4034 -1 -1
+0 1;
+#X obj 680 541 sel 1;
+#X obj 729 545 sel 0;
+#X obj 369 115 tgl 25 0 empty empty OUTPUT -10 30 2 12 -4034 -1 -1
+0 1;
+#X obj 794 537 sel 1;
+#X obj 838 541 sel 0;
+#X obj 433 200 vsl 50 200 0 1 0 0 empty empty ATT3 1 210 2 12 -4034
+-33289 -1 0 1;
+#X obj 245 621 *~;
+#X obj 507 201 vsl 50 200 0 1 0 0 empty empty ATT4 1 210 2 12 -4034
+-1 -1 0 1;
+#X obj 323 622 *~;
+#X obj 437 114 tgl 25 0 empty empty OUTPUT -10 30 2 12 -4034 -1 -1
+0 1;
+#X obj 901 539 sel 1;
+#X obj 950 543 sel 0;
+#X obj 511 113 tgl 25 0 empty empty OUTPUT -10 30 2 12 -4034 -1 -1
+0 1;
+#X obj 1015 535 sel 1;
+#X obj 1059 539 sel 0;
+#X msg 678 594 connect 2 0;
+#X msg 693 620 disconnect 2 0;
+#X msg 792 590 connect 3 0;
+#X msg 802 622 disconnect 3 0;
+#X msg 899 592 connect 4 0;
+#X msg 914 618 disconnect 4 0;
+#X msg 1013 588 connect 5 0;
+#X msg 1023 620 disconnect 5 0;
+#X obj 346 67 r~ at1;
+#X obj 434 63 r~ at2;
+#X obj 549 57 r~ at3;
+#X obj 655 61 r~ at4;
+#X connect 0 0 2 1;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 1;
+#X connect 4 0 7 1;
+#X connect 5 0 4 0;
+#X connect 7 0 6 0;
+#X connect 7 0 6 1;
+#X connect 8 0 9 0;
+#X connect 8 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 7 0;
+#X connect 13 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 7 0;
+#X connect 17 0 7 0;
+#X connect 18 0 19 1;
+#X connect 19 0 7 2;
+#X connect 20 0 21 1;
+#X connect 21 0 7 3;
+#X connect 22 0 23 0;
+#X connect 22 0 24 0;
+#X connect 23 0 38 0;
+#X connect 24 0 39 0;
+#X connect 25 0 26 0;
+#X connect 25 0 27 0;
+#X connect 26 0 40 0;
+#X connect 27 0 41 0;
+#X connect 28 0 29 1;
+#X connect 29 0 7 4;
+#X connect 30 0 31 1;
+#X connect 31 0 7 5;
+#X connect 32 0 33 0;
+#X connect 32 0 34 0;
+#X connect 33 0 42 0;
+#X connect 34 0 43 0;
+#X connect 35 0 36 0;
+#X connect 35 0 37 0;
+#X connect 36 0 44 0;
+#X connect 37 0 45 0;
+#X connect 38 0 7 0;
+#X connect 39 0 7 0;
+#X connect 40 0 7 0;
+#X connect 41 0 7 0;
+#X connect 42 0 7 0;
+#X connect 43 0 7 0;
+#X connect 44 0 7 0;
+#X connect 45 0 7 0;
+#X connect 46 0 19 0;
+#X connect 47 0 21 0;
+#X connect 48 0 29 0;
+#X connect 49 0 31 0;
+#X coords 0 -1 1 1 500 325 1 100 100;
+#X restore -807 -414 pd guts;
+#X coords 0 340 1 339 500 350 0;
