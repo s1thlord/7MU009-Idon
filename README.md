@@ -170,7 +170,7 @@ It is strongly advised for any new comers to this type of synthesis to watch the
 
 
 
-## Resources
+## Bibliography
 
 Dalgleish, M. (2016) CEC — eContact! 17.4 — The Modular Synthesizer Divided: The keyboard and its discontents by Mat Dalgleish. CEC | Canadian Electroacoustic Community, [online]. [Accessed 22 May 2016]. Available at: <http://econtact.ca/17_4/dalgleish_keyboard.html>.
 
