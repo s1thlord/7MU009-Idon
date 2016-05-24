@@ -11,7 +11,7 @@ The software for this project is a physical model of the Buchla 258 Dual oscilla
 
 ![buchla258](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-02-22%20at%2021.26.35.png)
 
-**fig 1** the 258 dual oscillator
+**fig. 1.** The 258 dual oscillator
 
 
 
@@ -25,17 +25,17 @@ The software for this project is a physical model of the Buchla 258 Dual oscilla
 ##The long and winding road (of development)
 
 
-To begin physically modeling this unit the first consideration was based upon the photograph in fig 1 which shows the fascia of the physical unit. From this photograph we can deduce that a potentiometer is being used to control the frequency output by the unit. Another potentiometer (“pot”) is being used to control a trimming of the frequency output (shown in fig 2). From the screen shot of the Pure Data abstraction (Fig 2) is showing how the software slider is being used to manipulate the output of the sine and square oscillators OSC~ and SQUARE~ objects in the screenshot. One pot is being used to control the wave shape of the unit from sine to saw and sine to square wave at this stage in the development however this function had not yet been implemented. The remaining three pots are being used to control the amount of audio signal being introduced to the frequency modulation (FM) circuit and the amount of modulation for 2 separate FM circuit designs (shown in fig 3).      
+To begin physically modeling this unit the first consideration was based upon the photograph in fig 1 which shows the fascia of the physical unit. From this photograph we can deduce that a potentiometer is being used to control the frequency output by the unit. Another potentiometer (“pot”) is being used to control a trimming of the frequency output (shown in fig. 2). From the screen shot of the Pure Data abstraction (Fig 2) is showing how the software slider is being used to manipulate the output of the sine and square oscillators OSC~ and SQUARE~ objects in the screenshot. One pot is being used to control the wave shape of the unit from sine to saw and sine to square wave at this stage in the development however this function had not yet been implemented. The remaining three pots are being used to control the amount of audio signal being introduced to the frequency modulation (FM) circuit and the amount of modulation for 2 separate FM circuit designs (shown in fig 3).      
 
 ![donscreen1](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-04-28%20at%2015.04.38.png)
 
-**Fig 2** shows the application of Pure Data to realize the frequency functions
+**Fig. 2.** Shows the application of Pure Data to realize the frequency functions
 
 In the screenshot Fig3 is shown how a slider labeled FM in has been used to manipulate the amplitude of audio being input into the FM circuit by using the *~ object. The FM lin and FM exp sliders are being used to manipulate the amount of modulation affecting the audio input this also utilizes the *~ object.
 
  ![don2screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-04-28%20at%2015.05.24.png)
       
-**Fig 3** shows the starting implementation of Frequency modulation in Pure Data.
+**Fig. 3.** shows the starting implementation of Frequency modulation in Pure Data.
 
 The final parts on the unit fascia with ref to fig 2 to consider was the input and output jack sockets but at this stage in the project these were ignored till the main functions of the unit had been realised.
 
@@ -43,11 +43,11 @@ On the physical Buchla 258 unit the wave shaper function slides very smoothly be
 
 ![don3screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-04-29%20at%2016.03.37.png)
 
-**Fig 4** Circuit diagram showing output Operational Amplifier 1973.
+**Fig. 4.** Circuit diagram showing output Operational Amplifier 1973.
 
 ![don4screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-04-29%20at%2016.35.12.png)
 
-**Fig 5** Pure Data screenshot showing inverted slider 
+**Fig. 5.** Pure Data screenshot showing inverted slider 
 
 This inversion allows for a smooth transition between the two waveforms with this achieved the main user interactive parts of the device where successfully replicated in a software environment. 
 The next part of this project began with exploring different ways to make the jack socket inputs and outputs of the unit in a software environment intuitive.
@@ -56,7 +56,7 @@ The first idea for this operation was to use the link system by which Pure Data 
  
 ![don4screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-02%20at%2010.49.48.png)
   
-  **Fig 6** Shows the failed attempt to map the various 
+  **Fig. 6.** Shows the failed attempt to map the various 
 jack socket operations. 
 
 From this failed attempt came the idea to use the Toggle object within Pure Data, which is a simple switch to imitate plugging in the jack leads. However this idea does come with one drawback that being for every connection to be made must be represented by a different toggle object. Despite this one draw back the method was used as being the next most intuitive system to mimic the “patching” used by modular synthesizer systems. 
@@ -65,7 +65,7 @@ The next task of this project was to look into the operation of each input for t
 
 ![don4screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-02%20at%2012.40.26.png)
 
-**Fig 7** shows the 1volt per octave scaling to control modeled voltage output. 
+**Fig. 7.** Shows the 1volt per octave scaling to control modeled voltage output. 
 
 
 With an aim to get the software as authentic as possible to the original unit, the software audio output was compared to a Youtube demonstration of a homemade clone version of the 258. With this juxtaposition it was discovered that the exponential FM output sounded completely different to that of the hardware version, even taking into account factors such as amplification warming the sound, the microphone or mobile phone used to record the video colouring the sound did not accommodate the difference in sound. Upon investigation it was discovered that what Buchla described as exponential FM is also known as cross modulation (Timoney et al 2011). With this new routing in place the software was starting to get a lot closer to the original sound of these units. 
@@ -76,20 +76,20 @@ Historically synthesizers suffered from a problem with heat causing the electron
 
 ![don4screen](https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-02%20at%2016.12.19.png)
 
-**Fig 8**  A stochastic probability abstraction.
+**Fig. 8.**  A stochastic probability abstraction.
 
 The stochastic abstraction works by setting a random start time from the loading of the patch this emulates the device being turned on and the circuits starting to warm. After the initial load-bang the time for the drift to occur is then random set to bang the dice roll to determine how far the unit will drift controlled by the rule set applied to the die from plus or minus 1 midi note up to 3 midi notes value in drift. 
 The Buchla series of modular synthesizers always had a distinctive sound this was caused by Don Buchlas use vactrols in his circuit designs by having a non-linear response to amplitude changes. From the circuit diagram of the 258 (shown in Fig 9) the vactrol IC is being used to control the modulation capabilities of the unit.
 
 ![don4screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-03%20at%2011.56.41.png)
 
-**Fig 9** Vactrol IC from Buchla 258.
+**Fig. 9.** Vactrol IC from Buchla 258.
 
 A Vactrol is basically a light dependant resistor, the more light that shines on it, the more voltage runs through it. You could typically hook one of these up to anything you may be circuit bending and use your hand to block out the light to modify the voyage. The Vactrol equation in this case, uses heat to drive the LED this then slows down the response to incoming control signals through a complex nonlinear filter. To emulate this response in Pure Data I used an open source abstraction (shown in Fig 10). The output of the LOP object is scaled nonlinearly by the mathematical power expression the sum of this signal is then added to the original signal taking the maximum value of the combined inputs for its output. Non-linearity is then enforced by the Max~ object outputting the peak value of the signal. 
 
  ![don5screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-03%20at%2011.25.28.png)
  
- **fig 10** shows the Pure Data open source abstraction of a vactrol.
+ **fig. 10.** Shows the Pure Data open source abstraction of a vactrol.
  
 ##  Software Overview
 
@@ -97,7 +97,7 @@ The graphic user interface or GUI for the 258 dual oscillator emulation software
  
  ![don6screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-03%20at%2013.24.16.png)
  
- **fig 11** shows the GUI of the 258 Dual Oscillator.
+ **fig. 11.** Shows the GUI of the 258 Dual Oscillator.
  
  
  Due to the nature of modular synthesis one single unit on its own would be musically not very useful and many of the patching techniques involved in modular synthesis would not be possible. Therefore the 258 Dual oscillator comes with 3 additional Pure Data patches to make this software fully capable.
@@ -107,41 +107,41 @@ The first of these patches is a model of the Buchla 123 sequential voltage sourc
 
  ![don6screen] (https://github.com/s1thlord/idon/blob/gh-pages/6979195532_f56baf3a3f_b.jpg)
  
- **fig 12** Buchla step sequencer 123 model
+ **fig. 12.** Buchla step sequencer 123 model
  
  ![don7screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.26.30.png)
  
- **fig 13** Software GUI step sequencer.
+ **fig. 13.** Software GUI step sequencer.
  
  Keeping with the 1970’s flavor of the project it was considered to also model The Buchla 280 quad envelope generator shown in Fig 14 with the Pure Data version shown below (fig 15). With the addition of these two units the oscillator model becomes controllable in terms of pitch manipulation and also note on and off control via the envelope generator. 
  
  ![don8screen] (https://github.com/s1thlord/idon/blob/gh-pages/buchla28007.png)
 
- **fig 14** Buchla Quad envelope generator.
+ **fig. 14.** Buchla Quad envelope generator.
 
  ![don9screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.30.36.png)
  
- **fig 15** Pure Data software GUI Envelope Generator.
+ **fig. 15.** Pure Data software GUI Envelope Generator.
  
  The final patch is a simple audio volume controller or mixer design to give complete control over the audio outputs no Buchla reference was used for this patch (shown in fig 16).
  
  
   ![don10screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.36.12.png)
 
- **fig 16** shows GUI of Pure Data volume controller.
+ **fig. 16.** Shows GUI of Pure Data volume controller.
 
 ## software Evaluation
 considering the pros and cons of this software:
 
  
 the positive aspects of this software are its tone generation capabilites. the software once "patched" between the various elements can produce a range of timbre that would be very hard to achieve with conventional sample based keyboards. 
-However this timbre range comes at a cost of CPU load when compared to a DAW instrument plugin.
-Another issue with this desgin as discussed in the development chapter is the patching of the modules. Originally it was intended to have a patching system simiLar to the DAW software Reason where outboard effects are plugged in via a "jack" cable.
+However this timbre range comes at a cost of CPU load when compared to a DAW instrument plugins.
+Another issue with this desin as discussed in the development chapter is the patching of the modules. Originally it was intended to have a patching system simiLar to the DAW software Reason where outboard effects are plugged in via a "jack" cable.
 
 ![donscreen12] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-20%20at%2012.56.57.png)
 
 
-**fig 17** Reason screenshot of patching
+**fig. 17.** Reason screenshot of patching
 
 
 
@@ -156,13 +156,13 @@ To operate this project it is recommended that all four patches are fully loaded
 
  ![don11screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.37.38.png)
 
-**Fig 18** screen shot showing patching toggles.
+**Fig. 18.** Screen shot showing patching toggles.
 
 The patching process for the 258 model is achieved in the similar manner as the previous example. With reference to fig 19 to patch the control voltage over the Frequency controller you would simply press the desired wave shape toggle located just above the frequency dial. In this case only the one toggle needs to be activated. The reason for the single toggle patching process for this unit was to make the GUI less cluttered and easier to understand. 
   
   ![don11screen] (https://github.com/s1thlord/idon/blob/gh-pages/Screen%20Shot%202016-05-18%20at%2017.37.51.png)
   
-  **Fig 19** Screenshot showing software input toggles on 258 model.
+  **Fig. 19.** Screenshot showing software input toggles on 258 model.
 
 
 This user guide is meant to cover only the very basics of the software
@@ -172,32 +172,34 @@ It is strongly advised for any new comers to this type of synthesis to watch the
 
 ## Resources
 
-Dalgleish, M   The Modular Synthesizer Divided Econtact web page, 2016. available at http://econtact.ca/17_4/dalgleish_keyboard.html
+Dalgleish, M. (2016) CEC — eContact! 17.4 — The Modular Synthesizer Divided: The keyboard and its discontents by Mat Dalgleish. CEC | Canadian Electroacoustic Community, [online]. [Accessed 22 May 2016]. Available at: <http://econtact.ca/17_4/dalgleish_keyboard.html>.
 
-Vactrol Pure data abstraction:  available at https://github.com/wilsontr/pd-abs
+Taylor, H. and Karlin, S. (1994) An introduction to stochastic modeling. Boston: Academic Press.
 
-Timoney. J, Lazzarini. V Exponential Frequency Modulation Bandwidth Criterion For Virtual Analog applications 2011 available at: http://recherche.ircam.fr/pub/dafx11/Papers/60_e.pdf  
+Timoney, j. and Lazzarini, V. (2016) Exponential Frequency Modulation Bandwidth Criterion For Virtual Analog `applications. 1st ed, [online]. [Accessed 22 May 2016]. Available at: <http://recherche.ircam.fr/pub/dafx11/Papers/60_e.pdf>.
 
+Wilson, T. (2016) wilsontr/pd-abs. GitHub, [online]. [Accessed 22 May 2016]. Available at: <https://github.com/wilsontr/pd-abs/blob/master/vactrol~.pd>.
 
- Howard M. Taylor, Samuel Karlin An Introduction to Stochastic Modeling
-  Academic Press. 1996. London 
 
 
 Any comments or enquiries about the software please e-mail the author chris.holder@mail.com
 
 ## Tutorial video link
-https://youtu.be/1ptTxy4Khcs
+This video covers a basic introduction to the software building thoughtout the video to a full working demonstration of the software.
+<https://youtu.be/1ptTxy4Khcs>
 
 
 ## software download
+Please note this software reqiures Pure Data to run link to free download: 
+<https://puredata.info/downloads>
+
+
+
 **Sequencer:**
- https://github.com/s1thlord/idon/blob/gh-pages/buchla%20123.pd 
+ <https://github.com/s1thlord/idon/blob/gh-pages/buchla%20123.pd> 
  
- **Audio mixer:**https://github.com/s1thlord/idon/blob/gh-pages/buchla%20mixer.pd            
+ **Audio mixer:**<https://github.com/s1thlord/idon/blob/gh-pages/buchla%20mixer.pd>            
 
-**Quad gate:** https://github.com/s1thlord/idon/blob/gh-pages/buchla%20280.pd
+**Quad gate:** <https://github.com/s1thlord/idon/blob/gh-pages/buchla%20280.pd>
 
-**Oscillator:** https://github.com/s1thlord/idon/blob/gh-pages/buchla258s.pd
-
-
-it is advised to download and run in Pure Data all modules for the software for best results.
+**Oscillator:** <https://github.com/s1thlord/idon/blob/gh-pages/buchla258s.pd>
